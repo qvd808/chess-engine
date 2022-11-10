@@ -12,12 +12,9 @@ class Display():
             if event.type == pygame.QUIT:
                 pygame.quit()
 
+    def runDisplayUpdate(self):
+        pygame.display.update()
+
     def runDisplay(self):
         pygame.display.init()
         pygame.display.set_mode(size = (self.width, self.height))
-
-        while True:
-
-            self.turnOffDisplayOnExitButton()
-
-            pygame.display.update()

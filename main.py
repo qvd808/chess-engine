@@ -7,6 +7,12 @@ class MainGame ():
     def run(self):
         self.display.runDisplay()
 
+        while True:
+
+            self.display.turnOffDisplayOnExitButton()
+
+            self.display.runDisplayUpdate()
+
 
 
 if __name__ == "__main__":

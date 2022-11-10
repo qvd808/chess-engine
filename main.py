@@ -1,4 +1,4 @@
-from display import Display
+from utils.display import Display
 
 class MainGame ():
     def __init__(self) -> None:

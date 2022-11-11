@@ -1,5 +1,7 @@
 import pygame
 
+# Display should only worries about how to display something on the screen, it should not care about render or other method that it need to worries about
+
 class Display():
     def __init__(self, width = 800, height = 600) -> None:
         pygame.init()

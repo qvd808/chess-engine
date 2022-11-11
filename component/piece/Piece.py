@@ -28,3 +28,6 @@ class Piece():
 
         if  not 'A' <= position[0] <= 'H':
             raise ValueError("Invalid input for the column")
+
+    def getPosition(self) -> str:
+        return self.col + self.row

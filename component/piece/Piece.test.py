@@ -56,6 +56,10 @@ class PieceUnitTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.piece1.move('A10')
 
+    def test_Get_Position(self):
+        self.assertEqual(self.piece1.getPosition(), 'H5')
+        self.assertEqual(self.piece2.getPosition(), 'A8')
+
 
 if __name__ == "__main__":
     unittest.main()

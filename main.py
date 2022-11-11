@@ -1,7 +1,9 @@
 from utils.display import Display
+import pygame
 
 class MainGame ():
     def __init__(self) -> None:
+        pygame.init()
         self.display = Display()
     
     def run(self):

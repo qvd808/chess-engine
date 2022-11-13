@@ -1,4 +1,4 @@
-from utils.display import Display
+from utils.Display import Display
 import pygame
 
 class MainGame ():
@@ -14,6 +14,8 @@ class MainGame ():
         while self.running:
 
             self.display.turnOffDisplayOnExitButton(self.exit_game)
+
+            self.display.draw_board()
 
             self.display.runDisplayUpdate()
 

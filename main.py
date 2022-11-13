@@ -1,4 +1,4 @@
-from utils.Display import Display
+from utils.display import Display
 import pygame
 
 class MainGame ():

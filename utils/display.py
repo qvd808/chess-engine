@@ -6,6 +6,7 @@ import pygame
 class CoordinateCalculator:
     def __init__(self) -> None:
         pass
+        
 
 class Render():
     def __init__(self) -> None:

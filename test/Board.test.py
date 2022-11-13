@@ -1,6 +1,15 @@
+import sys
+parent_dir = sys.path[0].split('\\')
+
+for i, file in enumerate(parent_dir):
+    if file == "chess-engine":
+        parent_dir = parent_dir[0:i+1]
+
+sys.path.append("\\".join(parent_dir))
+
 import unittest
-from Board import Board
-from piece.Piece import Piece
+from component.Board import Board
+from component.piece.Piece import Piece
 
 # Board should get the postion of the chess piece
 # Board should only need to know if a position is occupy or not

@@ -1,5 +1,14 @@
+import sys
+parent_dir = sys.path[0].split('\\')
+
+for i, file in enumerate(parent_dir):
+    if file == "chess-engine":
+        parent_dir = parent_dir[0:i+1]
+
+sys.path.append("\\".join(parent_dir))
+
 import unittest
-from Piece import Piece
+from component.piece.Piece import Piece
 
 # Piece should be able to get its postion
 

@@ -14,10 +14,13 @@ class ErrorHandling:
 
         if  not 'A' <= position[0] <= 'H':
             raise ValueError("Invalid input for the column")
-            
+
     def RaiseColorError(self, color):
         if not isinstance(color, str):
             raise ValueError("Value must be a string")
         
         if color != 'white' and color != 'black':
             raise ValueError("Value must be a string that is 'white' or 'black'")
+
+    def RaisePieceError(self, color):
+        pass

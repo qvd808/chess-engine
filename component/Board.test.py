@@ -14,28 +14,28 @@ class boardUniTest(unittest.TestCase):
         self.board = Board()
 
     def test_Insert_Piece(self):
-        piece1 = Piece('A5')
+        piece1 = Piece('A5', 'white')
         expectation = [8 * [0]] * 8
         expectation[0][4] = piece1
         self.assertTrue(self.board.insert(piece1))
         self.assertEqual(self.board.board, expectation)
 
-        piece2 = Piece('A5')
+        piece2 = Piece('A5', 'black')
         self.assertFalse(self.board.insert(piece2))
         self.assertEqual(self.board.board, expectation)
 
-        piece3 = Piece('B4')
+        piece3 = Piece('B4', 'white')
         expectation[1][3] = piece3
         self.assertTrue(self.board.insert(piece3))
         self.assertEqual(self.board.board, expectation)
     
     def test_IsThereAPiece(self):
-        piece1 = Piece('H5')
+        piece1 = Piece('H5', 'white')
         self.board.insert(piece1)
         self.assertTrue(self.board.isOccupy('H5'))
         self.assertFalse(self.board.isOccupy('B4'))
 
-        piece2 = Piece('A8')
+        piece2 = Piece('A8', 'black')
         self.board.insert(piece2)
         self.assertTrue(self.board.isOccupy('A8'))
         self.assertFalse(self.board.isOccupy('H4'))

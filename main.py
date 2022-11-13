@@ -5,15 +5,20 @@ class MainGame ():
     def __init__(self) -> None:
         pygame.init()
         self.display = Display()
+
+        self.running = True
     
     def run(self):
         self.display.runDisplay()
 
-        while True:
+        while self.running:
 
-            self.display.turnOffDisplayOnExitButton()
+            self.display.turnOffDisplayOnExitButton(self.exit_game)
 
             self.display.runDisplayUpdate()
+
+    def exit_game(self):
+        self.running = False
 
 
 

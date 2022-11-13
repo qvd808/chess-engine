@@ -51,11 +51,9 @@ class boardUniTest(unittest.TestCase):
 
 
     def test_RaisePieceError(self):
-        piece1 = Piece('H5', 'white')
         with self.assertRaises(ValueError):
             self.board.insert([])
 
-        piece2 = Piece('A8', 'black')
         with self.assertRaises(ValueError):
             self.board.insert("")
 

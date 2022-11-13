@@ -8,6 +8,7 @@ for i, file in enumerate(parent_dir):
 sys.path.append("\\".join(parent_dir))
 
 from utils.ErrorHandling import ErrorHandling
+from component.piece.Piece import Piece
 
 ####################################################
 
@@ -32,6 +33,8 @@ class Board:
         self.error = ErrorHandling()
     
     def insert(self, piece) -> bool:
+        self.error.RaisePieceError(piece, type=Piece)
+
         position = piece.getPosition()
         xCor, yCor = self.__coordinate.getCordinate(position)
 

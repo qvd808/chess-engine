@@ -49,6 +49,16 @@ class boardUniTest(unittest.TestCase):
         self.assertTrue(self.board.isOccupy('A8'))
         self.assertFalse(self.board.isOccupy('H4'))
 
+
+    def test_RaisePieceError(self):
+        piece1 = Piece('H5', 'white')
+        with self.assertRaises(ValueError):
+            self.board.insert([])
+
+        piece2 = Piece('A8', 'black')
+        with self.assertRaises(ValueError):
+            self.board.insert("")
+
     def test_RaisePositionErrorForIsOccupy(self):
         piece1 = Piece('H5', 'white')
         self.board.insert(piece1)

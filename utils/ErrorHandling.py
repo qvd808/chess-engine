@@ -22,5 +22,6 @@ class ErrorHandling:
         if color != 'white' and color != 'black':
             raise ValueError("Value must be a string that is 'white' or 'black'")
 
-    def RaisePieceError(self, color):
-        pass
+    def RaisePieceError(self, piece, type):
+        if not isinstance(piece, type):
+            raise ValueError("Value must be a Piece object")

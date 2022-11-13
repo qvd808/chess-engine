@@ -1,14 +1,19 @@
 import pygame
 
 # Display should only worries about how to display something on the screen, it should not care about render or other method that it need to worries about
+# Render should not worried about calculating the coordinate and should leave it to another classes
+
+class CoordinateCalculator:
+    def __init__(self) -> None:
+        pass
 
 class Render():
     def __init__(self) -> None:
         self.draw = pygame.draw
+        self.WHITE = (255, 255, 255)
 
     def draw_board(self, surface):
-
-        self.draw.rect(surface, (255,255,255), (200, 200, 100, 100), 1)
+        self.draw.rect(surface, self.WHITE, (200, 200, 100, 100), 1)
 
 class Display():
     def __init__(self, width = 800, height = 600) -> None:
